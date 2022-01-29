@@ -26,11 +26,14 @@ public class Calculatewage {
         result = hour*$standard_rate;
             System.out.println("ค่าจ้าง : "+result+" บาท");
         }
-        else  {
+        else if (hour > $standard_hour) {
         result = ($standard_rate*$standard_hour);
         bonus = (((hour-$standard_hour)*$standard_rate)/100*50)+(((hour-$standard_hour)*$standard_rate));
             System.out.println("โบนัส 50% : "+bonus+" บาท");
             System.out.println("รวมค่าจ้าง : "+(result+bonus)+" บาท");
+        }
+        else {
+        System.out.println();
         }
 
     }
